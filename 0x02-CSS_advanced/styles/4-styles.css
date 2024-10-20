@@ -1,0 +1,38 @@
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+body {
+    font-family: var(--font-family-base);
+    color: var(--text-color); /*foreground colour to use text color*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+}
+a {
+    color: var(--text-color); /* all anchor color set to foreground color */
+}
+
+.visually-hidden {
+    display: none; /* all elements of this class set to none i.e hidden */
+}
+
+.card-category {
+    color: var(--color-primary); /* all elements in this class set to this foreground color*/
+}
+
+.section-tagline {
+    color: var(--color-primary); /* all elements in this class have this forground color*/
+}
