@@ -1,3 +1,4 @@
+/*customising the root element*/
 :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -8,7 +9,6 @@
 
     --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
 }
 
 html {
@@ -17,7 +17,7 @@ html {
 
 body {
     color: var(--text-color); /*foreground colour to use text color*/
-    font-family: var(--font-family-base);
+    font-family: var(--font-family-base); 
 }
 
 h1, h2, h3, h4, h5, h6 {
