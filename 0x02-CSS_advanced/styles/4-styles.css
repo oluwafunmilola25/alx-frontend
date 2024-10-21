@@ -15,10 +15,9 @@ html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    font-family: var(--font-family-base);
     color: var(--text-color); /*foreground colour to use text color*/
+    font-family: var(--font-family-base);
 }
 
 h1, h2, h3, h4, h5, h6 {
