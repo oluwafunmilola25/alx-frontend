@@ -38,7 +38,7 @@ html {
 
 body {
     color: var(--text-color); /*foreground colour to use text color*/
-    font-family: var(--font-family-base); 
+    font-family: var(--font-family-base);
     font-size: var(--font-size-medium);
     font-weight: var(--font-weight-regular);
     line-height: var(--line-height-base);
@@ -49,9 +49,21 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: var(--font-weight-bold);
 }
     
-a {
+a[href] {
     color: var(--text-color); /* all anchor color set to foreground color */
     text-decoration: none;
+}
+
+a[href]:visited {
+    font-style: italic;
+}
+
+a[href]:hover {
+    text-decoration: underline;
+}
+
+a[href]:active {
+    color: var(--color-light-grey);
 }
 
 .visually-hidden {
@@ -63,7 +75,7 @@ a {
 }
 
 .section-header {
-    text-align: var(--section-header-align)
+    text-align: var(--section-header-align);
 }
 
 .section-title {
