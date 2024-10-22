@@ -725,14 +725,14 @@ ul.row {
 }
 
 .card-work .card-title a::after {
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
-    left: 0;
     bottom: 0;
-    content: "";
+    left: 0;
 }
 
-.card-work .card-title {
+.card-work:hover .card-title {
     opacity: 1;
 }
