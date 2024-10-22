@@ -452,5 +452,6 @@ a:active {
 
 .container {
     width: 960px;
-    margin: 0 auto; /*evenly distributes margins on both sides*/
+    margin-left: auto;
+    margin-right: auto; /*evenly distributes margins on both sides*/
 }
