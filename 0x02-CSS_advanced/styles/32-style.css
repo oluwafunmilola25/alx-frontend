@@ -355,7 +355,7 @@
     box-sizing: border-box;
   }
 
-  /*customising the root element for colors*/
+  /*customising the root element*/
 :root {
     --color-primary: #d73953;
     --color-black: #090909;
@@ -364,32 +364,25 @@
     --color-dark-grey: #353535;
     --text-color: var(--color-black);
 
-    /*custom onts*/
     --font-family-base: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-family-title: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
-    /*custom font sizes*/
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
     --font-size-x-large: 2.3rem;
     --font-size-xx-large: 4.8rem;
 
-    /*custom font weight*/
     --font-weight-regular: 400;
     --font-weight-bold: 700;
 
-    /*custom line height*/
     --line-height-small: 1.2;
     --line-height-base: 1.5;
     --line-height-big: 1.8;
 
-    /*custom section header*/
     --section-header-align: center;
 
-    /*custom tagline*/
     --section-tagline-transform: uppercase;
-    --section-tagline-margin: 0;
 
     --section-title-margin: 0;
     --section-title-color: var(--color-black);
@@ -411,6 +404,7 @@
     --nav-item-margin: 3rem 0 0;
     --nav-item-link-hover: var(--color-white);
 
+    --section-tagline-margin: 0;
     
     /*add border to the button*/
     --button-display: inline-block;
@@ -431,9 +425,9 @@
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
 
-    /*incorporating transition*/
-    --transition-duration: 0.3s;
-    --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01); 
+    /*customs transition properties*/
+    --transition-duration: .3s;
+    --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
 }
 
 html {
@@ -484,6 +478,8 @@ a:active {
     color: var(--button-hover-color);
     text-decoration: var(--button-hover-text-decoration);
     background-color: var(--button-hover-background);
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
 }
 
 .visually-hidden {
@@ -599,7 +595,7 @@ a:active {
     background-color: var(--color-white);
     width: 0;
     height: 0.2rem;
-    transition: width var(--transition-duration) var(--transition-cubic-bezier);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .nav .nav-link {
@@ -716,6 +712,10 @@ ul.row {
     overflow: hidden;
 }
 
+.card-work:hover .card-outer {
+    transform: scale(0.95);
+}
+
 .card-work .card-image img {
     height: 30rem;
     width: 100%;
@@ -729,22 +729,11 @@ ul.row {
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-.card-work:hover .card-image {
-    transform: scale(1.2);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
-}
-
-.card-work:hover .card-outer {
-    transform: scale(0.95);
-    transition: transform var(--transition-duration) var(--transition-cubic-bezier);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work:hover .card-inner {
     background-color: rgba(0, 0, 0, 0.7);
-    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
 
 .card-work .card-title {
@@ -772,4 +761,9 @@ ul.row {
 
 .card-work:hover .card-title {
     opacity: 1;
+}
+
+.card-work:hover .card-image {
+    transform: scale(1.2);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
 }
